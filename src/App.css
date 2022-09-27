@@ -1,0 +1,112 @@
+/* ---------------------------------- FONTS --------------------------------- */
+@font-face {
+  font-family: 'commuters-sans';
+  font-weight: normal;
+  src: url('./fonts/Fontspring-DEMO-commuterssans-extrabold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'MuseoSans_500';
+  src: url('./fonts/MuseoSans_500-webfont.woff2') format('woff2'),
+       url('./fonts/MuseoSans_500-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ------------------------------ APP CONTAINER ----------------------------- */
+#App {
+  background-color: #11727D;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#agenda__container {
+  position: absolute;
+  background: linear-gradient(0deg, rgba(223,249,248,1) 0%, rgba(255,255,255,1) 100%);
+  width: 70vw;
+  height: fit-content;
+  padding: 2vmin 3vmin;
+  border-radius: 2vmin;
+  margin-top: 3vh;
+  /* Should have overflow if we want the component size to be set */
+  /* overflow: scroll;  */
+}
+
+/* ------------------------------- TYPOGRAPHY ------------------------------- */
+.agenda-topic__container > h4{
+  font-family: commuters-sans;
+  font-size: 1.3em;
+  color: aliceblue;
+}
+
+.agenda-topic__container > * {
+  font-family: MuseoSans_500;
+}
+
+/* --------------------------------- OTHERS --------------------------------- */
+.agenda-topic__container {
+  background-color: #64bfc471;
+  display: grid;
+  grid-template-columns: [col0] 0 [col1] 18% [col2] 10% [col3] auto [col4] 3% [col5] min-content [col6] 0;
+  gap: 1.5vmin;
+  border-radius: 2.5vh;
+  align-items: center;
+  margin: 1vmin;
+  padding: 0.8vmin 0.2vmin;
+  transition: all 0.5s ease;
+}
+
+.agenda-topic__container > * {
+  padding: 1vmin 1vmin;
+  margin: auto;
+  margin-left: 0;
+}
+
+#dropdown {
+  font-family: MuseoSans_500;
+  margin: 0;
+  padding: 0;
+  color: #5a585C;
+}
+#dropdown:active {
+  background-color: #e2e2e2;
+}
+
+/* ---------------------------------- MODAL --------------------------------- */
+#modify-modal__container {
+  position: absolute;
+  z-index: 1;
+  margin-top: 5vmin;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding: 2vmin 3vmin;
+  background-color: #273a4be8;
+  font-family: MuseoSans_500;
+  border-radius: 2vmin;
+  color: white;
+  width: 50vw; /* Need a specific value to work */
+}
+
+#modify-modal__container > * {
+  margin-bottom: 1vmin;
+}
+
+/* --------------------------------- top bar -------------------------------- */
+#top-bar__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vmin;
+  padding-bottom: 0;
+}
+
+#top-bar__container > h2 {
+  color: #F4673C;
+  font-family: commuters-sans;
+  margin-top: 2.5vmin;
+}
